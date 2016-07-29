@@ -1,0 +1,353 @@
+/* ==========================================================================
+    reset
+   ========================================================================== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;    
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+@font-face {
+    font-family: OpenSans;
+    src: url(../fonts/OpenSans-Bold.ttf);
+    font-weight: bold;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+input::-webkit-input-placeholder {font-size: 16px;}
+input::-moz-placeholder {font-size: 16px;}
+/* ==========================================================================
+    html, body
+   ========================================================================== */
+.page {
+    background: #101114;
+}
+
+/* ==========================================================================
+    container
+   ========================================================================== */
+.container {
+    width: 960px;
+    padding-left: 321px;
+    margin: 0 auto;
+    position: relative;
+}
+
+/* ==========================================================================
+    header
+   ========================================================================== */
+.header {
+    background: #00aeef;
+    padding: 40px 170px 33px 28px;
+}
+
+.icon-menu {
+    width: 25px;
+    height: 30px;
+    padding: 5px;
+    cursor: pointer;
+    margin: 11px 10px 0 0;
+    display: none;
+}
+
+.icon-menu__item {
+    display: block;
+    height: 2px;
+    margin: 3px 0;
+    background: #000;
+}
+
+.header__title {
+    font-family: OpenSans;
+    font-size: 35px;
+    font-weight: bold;
+    color: #193945;
+    margin-bottom: 10px;
+}
+
+.header__text {
+    font-family: Arial;
+    font-size: 14px;
+    color: #193945;
+}
+
+/* ==========================================================================
+    main > sidebar
+   ========================================================================== */
+
+.sidebar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 318px;
+    height: 538px;
+
+    z-index: 20;
+    background: #1f2229;
+    -webkit-transition: left 1s ease-out 0.5s;;
+    -o-transition: left 1s ease-out 0.5s;;
+    transition: left 1s ease-out 0.5s;;
+}
+
+.logo {
+    height: 162px;
+    padding: 64px 0 0 29px;
+}
+
+.nav__item {
+    list-style-type: none;
+}
+
+.nav__link {
+    display: block;
+    height: 75px;
+    padding: 25px 0 0 29px;
+    font: 18px OpenSans, Arial;
+    color: #808592;
+}
+
+.nav__link_type_account {
+    color: #808592;
+    background-color: #191c24;
+    border-bottom: 1px solid #20232b;
+}
+
+.nav__link_type_account:last-child {
+    border-bottom: none;
+}
+
+.nav__link:hover {
+    color: #fff;
+}
+
+.nav__link_active {
+    background-color: #2a2d37;
+}
+
+/* ==========================================================================
+    main > content
+   ========================================================================== */
+
+.content {
+    padding: 43px 0 0 29px;
+    background: #f7f8f8;
+    color: #8494ab;
+    font-size: 16px; 
+    font-family: Arial;
+}
+
+.pay__info {
+    padding-bottom: 20px;
+}
+
+.info__title {
+    margin-bottom: 24px;
+}
+
+.info__account,
+.info__payment {
+    display: inline-block;
+    width: 159px;
+    margin-bottom: 12px;
+}
+
+.info__account-value,
+.info__payment-value {
+    color: #373c43;
+}
+
+.content__title {
+    font-family: OpenSans;
+    font-size: 22px;
+    color: #383d43;
+    padding-bottom: 21px;
+}
+
+.payform {
+    position: relative;
+}
+
+.bankcard {
+    width: 350px;
+    height: 236px;
+    border: 1px solid #e5eaef;
+    border-radius: 10px;
+}
+
+.bankcard_frontside {
+    position: relative;
+    padding: 22px 0 0 15px;
+    z-index: 10;
+    background-color: #f7f8f8;
+}
+
+.bankcard_backside {
+    position: absolute;
+    top: 20px;
+    left: 194px;
+    padding-top: 26px;
+}
+
+.bankcard__number,
+.bankcard__date {
+    display: inline-block;
+    margin-bottom: 7px;
+}
+
+.bankcard__number-part {
+    width: 65px;
+    margin: 5px 9px 8px 0;
+    text-align: center;
+}
+
+.bankcard__date-wrap {
+    display: inline-block;
+    width: 70px;
+    height: 42px;
+    margin: 5px 9px 0 0;
+    overflow: hidden;
+    background: url(../img/arrow.png) no-repeat 44px #fff;
+    border: 1px solid #e5eaef;
+}
+
+.bankcard__date-wrap_year {
+    width: 86px;
+    background-position: 62px center;
+}
+
+.bankcard__line {
+    float: right;
+    width: 268px;
+    height: 42px;
+    margin-bottom: 19px;
+    background: #e4e9ee;
+}
+
+.bankcard__cvv-wrap {
+    display: block;
+    width: 138px;
+    float: right;
+    margin-right: 14px;
+    position: relative;
+}
+
+.bankcard__cvv {
+    width: 138px;
+    padding-left: 12px;
+}
+
+.cvv-help {
+    position: absolute;
+    right: 10px;
+    bottom: 5px;
+}
+.cvv-help__question {
+    display: inline-block;
+    width: 26px;
+    height: 26px;
+    background: url(../img/hint.png) no-repeat;
+    cursor: help;
+}
+.cvv-help__popup {
+    display: none;
+    position: absolute;
+    left: -80px;
+    top: 38px;
+    width: 190px;
+    padding: 5px;
+    border: 1px solid #e4e9ee;
+    font-size: 13px;
+    background-color: #fff;
+}
+
+.cvv-help:hover .cvv-help__popup {
+    display: block;
+}
+
+.elem__key {
+    width: 138px;
+    background: url(../img/hint.png) no-repeat #fff;
+    background-position: 102px center;
+}
+
+.elem__key:focus {
+    background-image: none;
+}
+
+.bankcard__input {
+    height: 42px;
+    color: #535864;
+    border: 1px solid #e4e9ee;
+}
+
+.bankcard__input_error {
+    border: 1px solid red;
+}
+.bankcard__input_error:focus {
+    outline: none;
+}
+
+.bankcard__month {
+    width: 85px;
+    height: 42px;
+    border: 0;
+    padding-left: 14px;
+    background: transparent;
+}
+
+.bankcard__year {
+    width: 100px;
+    height: 42px;
+    border: 0;
+    padding-left: 14px;
+    background: transparent;
+}
+
+.bankcard__owner {
+    padding-left: 12px;
+    width: 319px;
+}
+
+.payform__submit {
+    margin: 35px 0 50px 0;
+    width: 175px;
+    height: 40px;
+    font-family: OpenSans;
+    font-size: 14px;
+    color: #fff;
+    border-radius: 3px;
+    opacity: 0.4;
+    background: -webkit-linear-gradient(bottom, #87b700, #a4c800);
+    background: -o-linear-gradient(bottom, #87b700, #a4c800);
+    background: linear-gradient(to top, #87b700, #a4c800);
+}
+
+/* ==========================================================================
+    footer
+   ========================================================================== */
+.footer {
+    padding: 27px 38px 0 29px;
+    background: #373c43;
+    overflow: hidden;
+}
+
+.footer p {
+    font-family: Arial;
+    font-size: 12px;
+    color: #89909d;
+    margin-bottom: 17px;
+}
