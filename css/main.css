@@ -110,6 +110,7 @@ input::-moz-placeholder {font-size: 16px;}
 
 .nav__item {
     list-style-type: none;
+    border-top: 1px solid #22252d;
 }
 
 .nav__link {
@@ -123,11 +124,6 @@ input::-moz-placeholder {font-size: 16px;}
 .nav__link_type_account {
     color: #808592;
     background-color: #191c24;
-    border-bottom: 1px solid #20232b;
-}
-
-.nav__link_type_account:last-child {
-    border-bottom: none;
 }
 
 .nav__link:hover {
